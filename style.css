@@ -1,0 +1,101 @@
+*{
+    margin:0 5px;
+    border: 0;
+}
+/*             | */
+/*per media query v */
+/* #navbar{
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    
+    height: 100vh;
+    
+}    
+    
+
+#main-doc{
+    margin-left: 250px;
+}
+ */
+body{
+    font-family: 'Work Sans', sans-serif;
+    max-width: 100%;
+}
+
+#main-doc{
+    line-height: 1.5rem;
+}
+/* NAVBAR */
+#navbar header{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 2rem;
+    
+}
+#navbar ul{
+    list-style: none;
+    
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 0;
+    
+}
+#navbar li{
+    border-bottom: solid grey;
+    margin: auto 25px;
+}
+#navbar a{
+    text-decoration: none;
+    
+}
+/* INIZIO TESTO  */
+.main-section header{
+    margin: 1.9rem 0;
+    text-align: center;
+    font-size: 1.8rem;
+}
+.code { 
+    background-color: rgb(116, 116, 116);
+    border: 1px solid grey;
+    margin :1.6rem 0;
+}
+
+.main-section h3{
+    font-size: 1.5rem;
+}
+/* SECONDA SEZIONE */
+#tutorial h2{
+    line-height: 2.5rem;
+}
+footer{
+    margin-top: 2rem ;
+    text-align: center;
+    background-color: grey;
+}
+@media (min-width:1000px) {
+    #navbar{
+    
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 250px;
+        
+        height: 100vh;
+        
+    }
+    #navbar li{
+        margin:2rem 0;
+
+
+    }    
+        
+    
+    #main-doc{
+        margin-left: 250px;
+    }
+    
+}

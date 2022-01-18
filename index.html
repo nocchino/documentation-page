@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+        <title>Python Tutorial for dummies</title>
+    </head>
+    <body>
+        <nav id="navbar">
+                <header>Python</header>
+                <ul>
+                    <li><a href="#python"  class="nav-link">Python</a></li>
+                    <li><a href="#introduction" class="nav-link">introduction</a></li>
+                    <li><a href="#Programming" class="nav-link">Programming</a></li>
+                    <li><a href="#Match_Statements" class="nav-link">Match Statements</a></li>
+                    <li><a href="#Defining_Functions" class="nav-link">Defining Functions</a></li>
+                    
+                </ul>
+        </nav>    
+            <!-- se cambi l'header cambia anche l'id  -->
+        <main id="main-doc">
+            
+            
+            <section class="main-section" id="python">
+                <header id="python">Python</header>
+                
+                <p>Python is an easy to learn, powerful programming language. It has efficient high-level data structures and a simple but effective approach to object-oriented programming. Python’s elegant syntax and dynamic typing, together with its interpreted nature, make it an ideal language for scripting and rapid application development in many areas on most platforms.
+                </p>
+                <ul>
+                    <li>The Python interpreter and the extensive standard library are freely available in source or binary form for all major platforms from the Python web site,<a href="https://www.python.org/">https://www.python.org/</a> , and may be freely distributed. The same site also contains distributions of and pointers to many free third party Python modules, programs and tools, and additional documentation.</li>
+                    <li>The Python interpreter is easily extended with new functions and data types implemented in C or C++ (or other languages callable from C). Python is also suitable as an extension language for customizable applications.
+                    
+                    This tutorial introduces the reader informally to the basic concepts and features of the Python language and system. It helps to have a Python interpreter handy for hands-on experience, but all examples are self-contained, so the tutorial can be read off-line as well.</li>
+                </ul>
+                
+                    
+                 
+            </section>
+            <section class="main-section" id="introduction">
+                <header id="header-intro" > introduction</header>
+                
+                <p>In the following examples, input and output are distinguished by the presence or absence of prompts (>>> and …): to repeat the example, you must type everything after the prompt, when the prompt appears; lines that do not begin with a prompt are output from the interpreter. Note that a secondary prompt on a line by itself in an example means you must type a blank line; this is used to end a multi-line command.</p>
+                <p>
+                    You can toggle the display of prompts and output by clicking on >>> in the upper-right corner of an example box. If you hide the prompts and output for an example, then you can easily copy and paste the input lines into your interpreter. 
+                </p>
+                <p>
+                    Many of the examples in this manual, even those entered at the interactive prompt, include comments. Comments in Python start with the hash character, #, and extend to the end of the physical line. A comment may appear at the start of a line or following whitespace or code, but not within a string literal. A hash character within a string literal is just a hash character. Since comments are to clarify code and are not interpreted by Python, they may be omitted when typing in examples. 
+                </p>
+                <p>
+                    Some examples:
+                </p>
+                <div class="code">
+                    <code># this is the first comment <br>
+                        spam = 1  # and this is the second comment <br>
+                                  # ... and now a third! <br>
+                        text = "# This is not a comment because it's inside quotes."</code>
+                </div>
+                <h3>Using Python as a Calculator</h3>
+                <p>The interpreter acts as a simple calculator: you can type an expression at it and it will write the value. Expression syntax is straightforward: the operators +, -, * and / work just like in most other languages (for example, Pascal or C); parentheses (()) can be used for grouping. For example:
+
+                </p>
+                <div class="code">
+                    <code>
+                        >>> 2 + 2
+                        4
+                        >>> 50 - 5*6
+                        20
+                        >>> (50 - 5*6) / 4
+                        5.0
+                        >>> 8 / 5  # division always returns a floating point number
+                        1.6
+                    </code>
+                </div>
+                <ul>
+                    <li>The integer numbers (e.g. 2, 4, 20) have type int, the ones with a fractional part (e.g. 5.0, 1.6) have type float. We will see more about numeric types later in the tutorial.</li>
+                    <li>
+                        Division (/) always returns a float. To do floor division and get an integer result (discarding any fractional result) you can use the // operator; to calculate the remainder you can use %:
+                    </li>
+                </ul>
+                <div class="code">
+                    <code>>>> 17 / 3  # classic division returns a float <br>
+                        5.666666666666667 <br>
+                        >>>
+                        >>> 17 // 3  # floor division discards the fractional part <br>
+                        5 <br>
+                        >>> 17 % 3  # the % operator returns the remainder of the division <br>
+                        2 <br>
+                        >>> 5 * 3 + 2  # floored quotient * divisor + remainder <br>
+                        17</code>
+                </div>
+                <p>
+                    With Python, it is possible to use the ** operator to calculate powers:
+                </p>
+                <div class="code">
+                    >>> 5 ** 2  # 5 squared <br>
+                    25 <br>
+                    >>> 2 ** 7  # 2 to the power of 7 <br>
+                    128
+                </div>     
+                <p> 
+                    The equal sign (=) is used to assign a value to a variable. Afterwards, no result is displayed before the next interactive prompt:
+                </p> 
+                <div class="code">
+                    <code>
+                        >>> width = 20 <br>
+                        >>> height = 5 * 9 <br>
+                        >>> width * height <br>
+                        900
+                    </code>
+                </div>
+                <h3>String</h3>
+                <p>
+                    Besides numbers, Python can also manipulate strings, which can be expressed in several ways. They can be enclosed in single quotes ('...') or double quotes ("...") with the same result 2. \ can be used to escape quotes:
+                </p>
+                <div class="code">
+                    <code>
+                        >>> 'spam eggs'  # single quotes <br>
+                        'spam eggs' <br>
+                        >>> 'doesn\'t'  # use \' to escape the single quote... <br>
+                        "doesn't" <br>
+                        >>> "doesn't"  # ...or use double quotes instead <br>
+                        "doesn't" <br>
+                        >>> '"Yes," they said.' <br>
+                        '"Yes," they said.' <br>
+                        >>> "\"Yes,\" they said." <br>
+                        '"Yes," they said.' <br>
+                        >>> '"Isn\'t," they said.'<br>
+                        '"Isn\'t," they said.'<br>
+                    </code>
+                </div>
+                <ul>
+                    <li>In the interactive interpreter, the output string is enclosed in quotes and special characters are escaped with backslashes. While this might sometimes look different from the input (the enclosing quotes could change), the two strings are equivalent. The string is enclosed in double quotes if the string contains a single quote and no double quotes, otherwise it is enclosed in single quotes. The print() function produces a more readable output, by omitting the enclosing quotes and by printing escaped and special characters:</li>
+                    <li>
+                        If you don’t want characters prefaced by \ to be interpreted as special characters, you can use raw strings by adding an r before the first quote:
+                    </li>
+                </ul>
+                <div class="code">
+                    <code>
+                        >>> print('C:\some\name')  # here \n means newline! <br>
+                        C:\some <br>
+                        ame <br>
+                        >>> print(r'C:\some\name')  # note the r before the quote <br>
+                        C:\some\name <br>
+                    </code>
+                </div>
+                    
+                
+
+            </section>
+            <section class="main-section" id="Programming">
+                <header id="header-Programming" >Programming</header>
+                <p>Of course, we can use Python for more complicated tasks than adding two and two together. For instance, we can write an initial sub-sequence of the<b><a href="https://en.wikipedia.org/wiki/Fibonacci_number">Fibonacci series</a></b>as follows:</p>
+                <div class="code">
+                    <code>
+                        >>> # Fibonacci series: <br>
+                        ... # the sum of two elements defines the next <br>
+                        ... a, b = 0, 1 <br>
+                        >>> while a < 10: <br>
+                        ...     print(a) <br>
+                        ...     a, b = b, a+b <br>
+                        ... <br>
+                        0 <br>
+                        1 <br>
+                        1 <br>
+                        2 <br>
+                        3 <br>
+                        5 <br>
+                        8 <br>
+                    </code>
+                    
+                    
+                </div>
+                <p>This example introduces several new features.</p>
+                    <ul>
+                        <li>The first line contains a multiple assignment: the variables a and b simultaneously get the new values 0 and 1. On the last line this is used again, demonstrating that the expressions on the right-hand side are all evaluated first before any of the assignments take place. The right-hand side expressions are evaluated from the left to the right.</li>
+                        <li>The while loop executes as long as the condition (here: a < 10) remains true. In Python, like in C, any non-zero integer value is true; zero is false. The condition may also be a string or list value, in fact any sequence; anything with a non-zero length is true, empty sequences are false. The test used in the example is a simple comparison. The standard comparison operators are written the same as in C: < (less than), > (greater than), == (equal to), <= (less than or equal to), >= (greater than or equal to) and != (not equal to).</li>
+                        <li>The body of the loop is indented: indentation is Python’s way of grouping statements. At the interactive prompt, you have to type a tab or space(s) for each indented line. In practice you will prepare more complicated input for Python with a text editor; all decent text editors have an auto-indent facility. When a compound statement is entered interactively, it must be followed by a blank line to indicate completion (since the parser cannot guess when you have typed the last line). Note that each line within a basic block must be indented by the same amount.</li>
+                        <li>The print() function writes the value of the argument(s) it is given. It differs from just writing the expression you want to write (as we did earlier in the calculator examples) in the way it handles multiple arguments, floating point quantities, and strings. Strings are printed without quotes, and a space is inserted between items, so you can format things nicely, like this:</li>
+                    </ul>
+                    <div class="code">
+                        <code>
+                            >>> i = 256*256 <br>
+                            >>> print('The value of i is', i) <br>
+                            The value of i is 65536 <br>
+                        </code>
+                    </div>
+
+            </section>
+            <section class="main-section" id="Match_Statements">
+                <header id="header_Match_Statements">Match Statements</header>
+                <p>A<b>match statement</b> takes an expression and compares its value to successive patterns given as one or more case blocks. This is superficially similar to a switch statement in C, Java or JavaScript (and many other languages), but it can also extract components (sequence elements or object attributes) from the value into variables.</p>
+                <p>The simplest form compares a subject value against one or more literals:</p>
+                <div class="code">
+                    <code>
+                        def http_error(status): <br>
+                            .....match status: <br>
+                                ......case 400: <br>
+                                    ......return "Bad request" <br>
+                                ..........case 404: <br>
+                                    ........return "Not found" <br>
+                                ...........case 418: <br>
+                                    .......return "I'm a teapot" <br>
+                                .........case _: <br>
+                                    ......return "Something's wrong with the internet" <br>
+                    </code>
+                </div>
+            </section>
+            <section class="main-section" id="Defining_Functions">
+                <header id="header_Defining_Functions">Defining Functions</header>
+                <p>We can create a<b>function</b>that writes the Fibonacci series to an arbitrary boundary:</p> 
+                <div class="code">
+                    <code>
+                                 >>> def fib(n):    # write Fibonacci series up to n <br>
+                            ...     """Print a Fibonacci series up to n.""" <br>
+                            ...     a, b = 0, 1 <br>
+                            ...     while a < n: <br>
+                            ...         print(a, end=' ') <br>
+                            ...         a, b = b, a+b <br>
+                            ...     print() <br>
+                            ... <br>
+                            >>> # Now call the function we just defined: <br>
+                            ... fib(2000) <br>
+                            0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597 <br>
+                    </code>
+                </div>
+                <p>The keyword <b>def</b> introduces a function definition. It must be followed by the function name and the parenthesized list of formal parameters. The statements that form the body of the function start at the next line, and must be indented.</p>
+                <p>The first statement of the function body can optionally be a string literal; this string literal is the function’s documentation string, or docstring. (More about docstrings can be found in the section Documentation Strings.) There are tools which use docstrings to automatically produce online or printed documentation, or to let the user interactively browse through code; it’s good practice to include docstrings in code that you write, so make a habit of it.</p>
+                <p>It is simple to write a function that returns a list of the numbers of the Fibonacci series, instead of printing it:</p>
+                <div class="code">
+                    <code>
+                        >>> def fib2(n):  # return Fibonacci series up to n <br>
+                        ...     """Return a list containing the Fibonacci series up to n.""" <br>
+                        ...     result = [] <br>
+                        ...     a, b = 0, 1 <br>
+                        ...     while a < n:<br>
+                        ...         result.append(a)    # see below<br>
+                        ...         a, b = b, a+b<br>
+                        ...     return result<br>
+                        ...<br>
+                        >>> f100 = fib2(100)    # call it<br>
+                        >>> f100                # write the result<br>
+                        [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]<br>
+                    </code>
+                </div>
+
+                <p>This example, as usual, demonstrates some new Python features:</p>
+                <ul>
+                    <li>The<b>return</b>statement returns with a value from a function. return without an expression argument returns None. Falling off the end of a function also returns<span style="text-decoration: underline;">None</span></li>
+                    <li>The statement result.append(a) calls a method of the list object result. A method is a function that ‘belongs’ to an object and is named obj.methodname, where obj is some object (this may be an expression), and methodname is the name of a method that is defined by the object’s type. Different types define different methods. Methods of different types may have the same name without causing ambiguity. (It is possible to define your own object types and methods, using classes, see Classes) The method append() shown in the example is defined for list objects; it adds a new element at the end of the list. In this example it is equivalent to result = result + [a], but more efficient.</li>
+                </ul>
+            </section>
+
+            <footer>
+                <h4>For more info visit :<a href="https://docs.python.org/3/tutorial/">https://docs.python.org/3/tutorial/</a></h4>
+            </footer>
+        </main>
+
+
+
+
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    </body>
+
+
+</html>
